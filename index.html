@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="login.css"> -->
+    <title>Slot machine</title>
+</head>
+
+<body>
+    <div class="loginBody" id="loginBody">
+        <div class="loginForm" id="loginForm">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Регистрация</h1>
+                    
+                    <span>Введите данные для регистрации</span>
+                    <input type="text" placeholder="Имя" id="nameSignUp"/>
+                    <input type="email" placeholder="Почта" id="emailSignUp"/>
+                    <input type="password" placeholder="Пароль" id="passwordSignUp"/>
+                    <button onclick=singUpUser()>Зарегистрироваться</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Войти</h1>
+                    
+                    <span>Введите данные для входа</span>
+                    <input type="email" placeholder="Почта" id="userEmail"/>
+                    <input type="password" placeholder="Пароль" id="userPassword"/>
+                    <button onclick=loginUser()>Войти</button>
+                </form>
+            </div>
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1>Добро пожаловать!</h1>
+                        <p>Введите данные для регистрации</p>
+                        <button class="ghost" id="signInGhost">Войти</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1>С Возвращением!</h1>
+                        <p>Введите Ваши данные для входа</p>
+                        <button class="ghost" id="signUpGhost">Регистрация</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- partial:index.partial.html -->
+<main class="site-wrapper" hidden>
+    <div class="pt-table desktop-768">
+                      <div class="container">
+                          <div class="row">
+                              <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                                  <div class="page-title  home text-center">
+                                    <span class="heading-page"> Welcome to SaleReels
+                                    </span>
+                                      
+                                  </div>
+  
+                                  <div class="hexagon-menu clear">
+                                      
+                                      
+                                      <div class="hexagon-item" id="balanceBtn">
+                                          <div class="hex-item">
+                                              <div></div>
+                                              <div></div>
+                                              <div></div>
+                                          </div>
+                                          <div class="hex-item">
+                                              <div></div>
+                                              <div></div>
+                                              <div></div>
+                                          </div>
+                                          <a  class="hex-content">
+                                              <span class="hex-content-inner">
+                                                  <span class="icon">
+                                                      <i class="fa fa-money-bill"></i>
+                                                  </span>
+                                                  <span class="title" id="balance"></span>
+                                                  <span class="title">руб.</span>
+                                              </span>
+                                              <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                          </a>    
+                                      </div>
+                                      <div class="hexagon-item">
+                                          <div class="hex-item">
+                                              <div></div>
+                                              <div></div>
+                                              <div></div>
+                                          </div>
+                                          <div class="hex-item">
+                                              <div></div>
+                                              <div></div>
+                                              <div></div>
+                                          </div>
+                                          <a  class="hex-content">
+                                              <span class="hex-content-inner">
+                                                  <span class="icon">
+                                                      <i class="fa fa-id-badge"></i>
+                                                  </span>
+                                                  <span class="title" id="profile"></span>
+                                              </span>
+                                              <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="slots-container">
+                        <p>Нажмите ПРОБЕЛ</p>
+                        <div class="slots">
+                            <div class="reel"></div>
+                            <div class="reel"></div>
+                            <div class="reel"></div>
+                        </div>
+                    </div>
+                  </div>
+                  
+              </div>
+    </main>
+  <!-- partial -->
+    <div id="debug" class="debug"></div>
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+    </body>
+</html>
+
+
